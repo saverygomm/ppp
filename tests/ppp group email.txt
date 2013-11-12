@@ -1,0 +1,13 @@
+Hi everyone,
+As the PPP code is now available for download, Richard, Belinda and I have been in discussion about setting up a list of tests for the PPP.  When originally developed, the testing was done by eyeing up the results from the DOC dataset and on subsets of the data.  It would have been good to have such tests from the start but it's better to include these later than never.  I've set up an online folder with some basic tests at the following repository: 
+
+github.com/.../
+
+The list of tests is documented on that page if you scroll down a little way.  There are things like 'what should the project costs be if each had an action that costs $1?'  The tests are rather simplistic at the moment on a dataset of 10 species with 100 actions each.  
+
+Does anyone have ideas of further tests that could be set up on generated data that would demonstrate that the PPP code works as planned?  Any input would be much appreciated.  If you could think of any ways in which the PPP could be "broken" then that's what I'm aiming for.  The tests are related to the actual PPP algorithm, not the data cleaning stages, so assume that you have perfectly cleaned data to input to the PPP.  Some of the tests include generating fake data, so that's no problem to add.  
+
+Once these tests are done, I will leave the PPP code online with generic variable and column names (not DOC-associated ones), a test script to illustrate how it is run, and I'll save a script that manipulates the DOC dataset to fit the updated code (plus the extra DOC-related functions like DataSetup.R etc which aren't related to the PPP algorithm as such).  
+
+Cheers all,
+Will

@@ -1,0 +1,42 @@
+	Hi all,
+
+
+It would be good to have the column names set in stone.  I'm not sure of the best way to rename the GIS related data.  
+
+There are 3 files associated with the GIS data - polygon data, superpolygon data and overlap data.  The order of the columns doesn't matter.  
+Polygon data has titles: ManagementSiteID, Hectares
+Both super-polygon data and overlap data have the following titles:ActivityID, MethodID, OutputTargetID, ThreatID, ManagementActionID, ManagementSiteID, SpeciesID, SpeciesName
+
+
+
+
+
+These lines don't work... DataSetup.R
+#    write.csv(cost.period1,"Period1.csv", row.names=FALSE)
+#    write.csv(cost.period2,"Period2.csv", row.names=FALSE)
+#    write.csv(cost.period3,"Period3.csv", row.names=FALSE)
+
+
+We use with(a.data, Period1Cost) instead of a.data$Period1Cost if that column is existing because it will throw an error if it doesn't exist.  Will be tacked on the end if it doesn't exist and one uses the dollar sign notation.  
+
+(could define all these in a list and pass that)
+
+
+
+
+Changed first column of new.hectares to be "SpatialID".  
+Changed column name of super.poly from "Management" to "ManagementSiteID"
+
+Internal changes:
+Added argument for year.text
+Removed references to column numbers, replaced with column names
+Moved cleaning commands at the start of PrioritisationII.R to the respective data cleaning functions
+Changed this line in PrioritisationII.R:
+  extra <- match(with(a.data, unique(species_id)), with(b.data, species_id))
+
+
+
+Changed the names of a.data from spp_text to ProjectText
+This has been changed within PrioritisationII also.  
+PrioritisationII.R while loop has been changed to be generated budget >= set budget (not just greater than).  This solves a problem with using set_budget <- Inf
+
