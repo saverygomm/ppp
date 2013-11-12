@@ -1,4 +1,5 @@
-# R package for Project Prioritisation Protocol
+# Project Prioritisation Protocol
+## R package
 
 This repository contains the R package for the Project Prioritisation Protocol of Joseph et al (2008).  
 
