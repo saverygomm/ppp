@@ -11,4 +11,5 @@ The following are contained
 
 
 References
-* Joseph, L. ... 
+* ![Joseph, L.N., Maloney, R.F., Possingham, H. P][http://onlinelibrary.wiley.com/doi/10.1111/j.1523-1739.2008.01124.x/abstract]
+
