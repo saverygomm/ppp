@@ -1,7 +1,9 @@
 # Test script for the PPP.  
 # This script should run cleanly with the 'ppp' R package.  
+# 
 # This should be started with a clean R session, set the working directory as the base folder to which the zip-file from Github is downloaded.  
-
+# This is for testing the function PrioritisationIII.R
+# 
 # The following tests are run on a list of 10 species with scinames from Aa to Jj, each species with 100 actions each:  
 
 # INPUT: Set the budget to zero
@@ -48,22 +50,22 @@
 
 # W. Probert, 2013.  
 
-# Parameters
-directory <- getwd()
-weighting <- 1
-multiplier <- 1
-set_budget <- 0
-overlap.indicator <- FALSE
-discount.rate <- 0
-T <- 50
-stop.iteration <- Inf
-stop.no.of.species <- 0
+########################
+## Set the parameters ##
+########################
+
+source(file = "./test_arguments.R")
 
 ########################
 ## Generate the data. ##
 ########################
 
-source(file = "./ppp_data.R")
+source(file = "./ppp_pseudo_data.R")
+
+########################
+## Load the functions ##
+########################
+
 
 #####################
 ###   ALGORITHM   ###
